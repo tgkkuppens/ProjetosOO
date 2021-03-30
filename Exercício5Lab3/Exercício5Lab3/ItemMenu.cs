@@ -7,7 +7,7 @@ namespace Exercício5Lab3
     class ItemMenu
     {
         string nome;
-        float preco = 2.50f;
+        float preco;
 
         public ItemMenu(string nome)
         {
@@ -24,9 +24,9 @@ namespace Exercício5Lab3
         {
             Console.WriteLine(Nome);
         }
-        public void ImprimirPreco()
+        public virtual void ImprimirPreco()
         {
-            Console.WriteLine(Preco);
+            Console.WriteLine("O preço é: R$" + Preco);
         }
 
         

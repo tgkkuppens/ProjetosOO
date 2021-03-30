@@ -6,29 +6,26 @@ namespace Exercício5Lab3
 {
     class Bebida : ItemMenu
     {
-        int tamanho;
+      
 
 
 
-        public Bebida(string nome, int tamanho) : base(nome)
+        public Bebida(string nome, float valorPequeno, float valorMedio, float valorGrande) : base(nome)
         {
-            Tamanho = tamanho;
+             ValorPequeno = valorPequeno;
+             ValorMedio = valorMedio;
+            ValorGrande = valorGrande;
 
-            if (Tamanho == 1)
-            {
-                Preco = 5;
-            }
-            if (Tamanho == 2)
-            {
-                Preco = 10;
-            }
-            if (Tamanho == 3)
-            {
-                Preco = 15;
-            }
+        }
+        public double ValorPequeno { get; private set; }
+        public double ValorMedio { get;private set; }
+        public double ValorGrande { get; private set; }
+
+        public override void ImprimirPreco()
+        {
+            Console.WriteLine("Os preços são: Pequeno - R$"+ ValorPequeno +", Médio - R$" + ValorMedio+ ", Grande - R$" + ValorGrande);
         }
 
-        public int Tamanho { get => tamanho; protected set => tamanho = value; }
 
 
     }
